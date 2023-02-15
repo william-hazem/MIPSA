@@ -117,7 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="richTextBox_MIPS.Text" xml:space="preserve">
+  <data name="rtbMIPS.Text" xml:space="preserve">
     <value>ADD $1, $2, $3
 SUB $1, $2, $3
 AND $1, $2, $3
@@ -129,16 +129,17 @@ SLL $1, $2, 5
 SRL $1, $2, 5
 SRA $1, $2, 5
 SLLv $1, $2, $3
+tag:
 SRLv $1, $2, $3
 SRAv $1, $2, $3
 LW $1, 5($2) 
 SW $1, 5($2)
-BEQ $1, $2, 5
+BEQ $1, $2, tag
 ADDi $1, $2, 5
 ANDi $1, $2, 5
 ORi $1, $2, 5
 SLTi $1, $2, 5
-J 5
+J tag
 JAL 5
 NOP</value>
   </data>
